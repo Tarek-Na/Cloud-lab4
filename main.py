@@ -6,7 +6,7 @@ INSTANCE = uuid.uuid4().hex[:8]  # generated once per container instance
 
 @app.route("/")
 def hello():
-    message = os.environ.get("MESSAGE", "Version 1")
+    message = os.environ.get("MESSAGE", "Version 2 from GitHub"))
     service = os.environ.get("K_SERVICE", "local")
     revision = os.environ.get("K_REVISION", "local")
     return (f"{message} - Hello from Cloud Run: service {service}, "
